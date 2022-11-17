@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printunnbr.c                                    :+:      :+:    :+:   */
+/*   ft_print_unnbr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moudrib <moudrib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:41:09 by moudrib           #+#    #+#             */
-/*   Updated: 2022/11/15 13:22:21 by moudrib          ###   ########.fr       */
+/*   Updated: 2022/11/17 01:51:02 by moudrib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ int	ft_len(unsigned int nbr)
 
 void	ft_putunnbr(unsigned int nbr)
 {
-	int	length;
-
-	length = 0;
 	if (nbr < 10)
-		length += ft_print_char(nbr + 48);
+		ft_print_char(nbr + 48);
 	else
 	{
 		ft_putunnbr(nbr / 10);
@@ -41,7 +38,7 @@ void	ft_putunnbr(unsigned int nbr)
 	}
 }
 
-int	ft_printunnbr(unsigned int nbr)
+int	ft_print_unnbr(unsigned int nbr)
 {
 	ft_putunnbr(nbr);
 	return (ft_len(nbr));

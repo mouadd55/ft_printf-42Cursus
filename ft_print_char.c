@@ -6,7 +6,7 @@
 /*   By: moudrib <moudrib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 08:19:33 by moudrib           #+#    #+#             */
-/*   Updated: 2022/11/15 13:25:53 by moudrib          ###   ########.fr       */
+/*   Updated: 2022/11/16 13:02:40 by moudrib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_print_char(char c)
 {
-	int	length;
-
-	length = 0;
-	return (length += write (1, &c, 1));
+	return (write (1, &c, 1));
 }
