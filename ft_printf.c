@@ -6,7 +6,7 @@
 /*   By: moudrib <moudrib@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 09:24:20 by moudrib           #+#    #+#             */
-/*   Updated: 2022/11/17 01:55:28 by moudrib          ###   ########.fr       */
+/*   Updated: 2022/11/17 04:56:23 by moudrib          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ int	ft_format(va_list args, const char s)
 	else if (s == 's')
 		length += ft_print_str(va_arg(args, char *));
 	else if (s == 'p')
-		length += ft_print_ptr(va_arg(args, unsigned long));
+		length += ft_print_ptr(va_arg(args, unsigned long long));
 	else if (s == 'd' || s == 'i')
 		length += ft_print_dec(va_arg(args, int));
 	else if (s == 'u')
 		length += ft_print_unnbr(va_arg(args, unsigned int));
 	else if (s == 'x')
-		length += ft_print_hexa(va_arg(args, unsigned long long), 'x');
+		length += ft_print_hexa(va_arg(args, unsigned int), 'x');
 	else if (s == 'X')
-		length += ft_print_hexa(va_arg(args, unsigned long long), 'X');
+		length += ft_print_hexa(va_arg(args, unsigned int), 'X');
 	else if (s == '%')
 		length += write (1, "%", 1);
 	return (length);
